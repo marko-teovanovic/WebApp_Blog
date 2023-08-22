@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <title>Gaming App</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Games World!</h1>
+        <nav class="nav-buttons">
+            <a class="nav-btn" href="/consoles">Consoles</a>
+            <a class="nav-btn" href="/newReleases">New Releases</a>
+            <a class="nav-btn">Top 10</a>
+            <a class="nav-btn">Reviews</a>
+        </nav>
+        <div class="auth-buttons">
+            <a class="btn" href="/login">Login</a>
+            <a class="btn" href="/register">Register</a>
+        </div>
+    </header>
+    <main>
+        <div class="upcoming-games">
+            <h2>Upcoming Games</h2>
+        </div>
+        <div class="user-reviews">
+            <h2>User Reviews</h2>
+        </div>
+    </main>
+</body>
+</html>
