@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='newProf.css') }}" type="text/css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Games World!</h1>
+        <nav class="nav-buttons">
+            <a class="nav-btn" href="/consoles">Consoles</a>
+            <a class="nav-btn" href="/newReleases">New Releases</a>
+            <a class="nav-btn">Top 10</a>
+            <a class="nav-btn">Reviews</a>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-section">
+            <div class="profile-picture">
+            </div>
+            <div class="profile-info">
+                <h1>{{ username }}</h1>
+                <p>Console: Xbox One</p>
+                <p>Bio: Avid gamer and adventurer.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
