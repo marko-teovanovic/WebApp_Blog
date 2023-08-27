@@ -8,7 +8,9 @@
 </head>
 <body>
     <header>
-        <h1 class="logo">Games World!</h1>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image">
+        </div>
         <nav class="nav-buttons">
             <a class="nav-btn" href="/consoles">Consoles</a>
             <a class="nav-btn" href="/newReleases">New Releases</a>

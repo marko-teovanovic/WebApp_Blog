@@ -8,7 +8,7 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-def create_table(): 
+def create_table():
     conn = get_db_connection()
     cursor = conn.cursor()
 
@@ -16,7 +16,8 @@ def create_table():
                         id INTEGER PRIMARY KEY,
                         username TEXT NOT NULL,
                         email TEXT NOT NULL,
-                        password TEXT NOT NULL
+                        password TEXT NOT NULL,
+                        platform TEXT NOT NULL
                     )''')
 
     conn.commit()
@@ -29,21 +30,22 @@ def save_profile():
     username = request.form['username']
     email = request.form['email']
     password = request.form['password']
+    platform = request.form.get('platform')  
 
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    cursor.execute("INSERT INTO users (username, email, password) VALUES (?, ?, ?)",
-                   (username, email, password))
+    cursor.execute("INSERT INTO users (username, email, password, platform) VALUES (?, ?, ?, ?)",
+                   (username, email, password, platform))
 
     conn.commit()
     conn.close()
 
-    return redirect(url_for('profile', username=username)) 
+    return redirect(url_for('profile', username=username, platform=platform)) 
 
-@app.route('/profile/<username>')
-def profile(username):
-    return render_template('profile.html', username=username)
+@app.route('/profile/<username>/<platform>')
+def profile(username, platform):
+    return render_template('profile.html', username=username, platform=platform)
 
 @app.route('/')
 def home():

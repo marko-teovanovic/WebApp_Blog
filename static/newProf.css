@@ -12,6 +12,12 @@ h1 {
     color: #1d1d1d;
 }
 
+p {
+    margin-left: 10px;
+    padding: 0;
+    color: #1d1d1d;
+}
+
 body {
     font-family: 'Press Start 2P', sans-serif;
     background-color: #1d1d1d;
@@ -27,10 +33,9 @@ header {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.logo {
-    font-size: 28px;
-    color: #ff6f00;
-    margin-bottom: 10px;
+.logo-image {
+    width: 100px; 
+    height: auto; 
 }
 
 .nav-buttons {

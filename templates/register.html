@@ -8,7 +8,9 @@
 </head>
 <body>
     <header>
-        <h1 class="logo">Games World!</h1>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image">
+        </div>
         <nav class="nav-buttons">
             <a class="nav-btn" href="/consoles">Consoles</a>
             <a class="nav-btn" href="/newReleases">New Releases</a>
@@ -21,18 +23,25 @@
         <h2>Register</h2>
         <form id="register-form" action="/register" method="post">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            
-            <input type="submit" value="Save Profile">Register</input>
+<input type="text" id="username" name="username" required>
+
+<label for="platform">Gaming Platform:</label>
+<select id="platform" name="platform" required>
+    <option value="PC">PC</option>
+    <option value="PlayStation">PlayStation</option>
+    <option value="Xbox">Xbox</option>
+</select>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+
+<label for="confirm-password">Confirm Password:</label>
+<input type="password" id="confirm-password" name="confirm-password" required>
+
+<input type="submit" value="Register">
         </form>
     </main>
     
