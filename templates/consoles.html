@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gaming Consoles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='consStyle.css') }}" type="text/css">
 </head>
 <body>
-    <h1>CONSOLES</h1>
+    <header>
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image-as-button">
+        </a>
+        <nav class="nav-buttons">
+            <a class="nav-btn" href="/consoles">Consoles</a>
+            <a class="nav-btn" href="/newReleases">New Releases</a>
+            <a class="nav-btn">Top 10</a>
+            <a class="nav-btn">Reviews</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="console">
+            <img src="{{ url_for('static', filename='pc_console.jpg') }}" alt="Console 1">
+            <h2>PC</h2>
+            <p>A gaming computer, also known as a gaming PC, is a specialized personal computer designed for playing video games at high standards.</p>
+        </section>
+
+        <section class="console">
+            <img src="{{ url_for('static', filename='ps5_console.jpg') }}" alt="Console 1">
+            <h2>Play Station</h2>
+            <p>PlayStation is a video gaming brand that consists of five home video game consoles</p>
+        </section>
+
+        <section class="console">
+            <img src="{{ url_for('static', filename='xbox_console.png') }}" alt="Console 1">
+            <h2>X Box</h2>
+            <p>Xbox is a video gaming brand created and owned by Microsoft. The brand consists of five video game consoles.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Game Blog. All rights reserved.</p>
+    </footer>
 </body>
 </html>
