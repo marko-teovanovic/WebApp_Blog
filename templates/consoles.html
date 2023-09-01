@@ -12,7 +12,15 @@
             <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image-as-button">
         </a>
         <nav class="nav-buttons">
-            <a class="nav-btn" href="/consoles">Consoles</a>
+            <div class="dropdown">
+                <button class="nav-btn dropbtn">Consoles</button>
+                <div class="dropdown-content">
+                    <a href="">PC</a>
+                    <a href="">Xbox</a>
+                    <a href="">PlayStation</a>
+                    <a href="">Nintendo</a>
+                </div>
+            </div>
             <a class="nav-btn" href="/newReleases">New Releases</a>
             <a class="nav-btn">Top 10</a>
             <a class="nav-btn">Reviews</a>
