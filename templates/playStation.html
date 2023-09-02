@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='consoleStyles.css') }}" type="text/css">
+    <title>PlayStation Information</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image-as-button">
+        </a>
+        <nav class="nav-buttons">
+            <div class="dropdown">
+                <button class="nav-btn dropbtn">Consoles</button>
+                <div class="dropdown-content">
+                    <a href="/pc">PC</a>
+                    <a href="/xbox">Xbox</a>
+                    <a href="/playStation">PlayStation</a>
+                    <a href="/nintendo">Nintendo</a>
+                </div>
+            </div>
+            <a class="nav-btn" href="/newReleases">New Releases</a>
+            <a class="nav-btn">Top 10</a>
+            <a class="nav-btn">Reviews</a>
+        </nav>
+        <div class="auth-buttons">
+            <a class="btn" href="/login">Login</a>
+            <a class="btn" href="/register">Register</a>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <div class="box">
+            <h2>PlayStation - Gaming Console</h2>
+            <p>
+                Here are some facts about PlayStation:
+                <ul>
+                    <li>PlayStation is a line of gaming consoles developed by Sony Interactive Entertainment. It has been a major player in the gaming industry since the release of the original PlayStation in 1994.</li>
+                    <li>The PlayStation family includes several generations of consoles, including the PlayStation 1, PlayStation 2, PlayStation 3, PlayStation 4, PlayStation 5, and the PlayStation Portable (PSP).</li>
+                    <li>PlayStation consoles are known for their exclusive game titles, powerful hardware, and features like online multiplayer through PlayStation Network (PSN).</li>
+                    <li>The PlayStation 5 (PS5) is the latest generation and offers high-performance gaming, ray tracing, and fast load times thanks to its SSD storage.</li>
+                    <li>PlayStation Plus is a subscription service that provides access to online multiplayer, free monthly games, and exclusive discounts.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body, h2, h3, p, ul, li {
+body, h2, h3, p, ul {
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -146,4 +146,8 @@ header {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+ul {
+    color: #ff6f00;
 }

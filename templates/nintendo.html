@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='consoleStyles.css') }}" type="text/css">
+    <title>Nintendo Information</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image-as-button">
+        </a>
+        <nav class="nav-buttons">
+            <div class="dropdown">
+                <button class="nav-btn dropbtn">Consoles</button>
+                <div class="dropdown-content">
+                    <a href="/pc">PC</a>
+                    <a href="/xbox">Xbox</a>
+                    <a href="/playStation">PlayStation</a>
+                    <a href="/nintendo">Nintendo</a>
+                </div>
+            </div>
+            <a class="nav-btn" href="/newReleases">New Releases</a>
+            <a class="nav-btn">Top 10</a>
+            <a class="nav-btn">Reviews</a>
+        </nav>
+        <div class="auth-buttons">
+            <a class="btn" href="/login">Login</a>
+            <a class="btn" href="/register">Register</a>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <div class="box">
+            <h2>Nintendo - Gaming Console</h2>
+            <p>
+                Here are some facts about Nintendo:
+                <ul>
+                    <li>Nintendo is a Japanese gaming company known for creating iconic gaming franchises and consoles.</li>
+                    <li>The Nintendo family includes consoles such as the Nintendo Entertainment System (NES), Super Nintendo Entertainment System (SNES), Nintendo 64, GameCube, Wii, Wii U, Nintendo Switch, and handhelds like the Game Boy, Nintendo DS, and Nintendo 3DS.</li>
+                    <li>Nintendo is famous for franchises like Super Mario, The Legend of Zelda, Pokémon, and more.</li>
+                    <li>The Nintendo Switch is one of the latest consoles, offering both handheld and docked gaming modes, with a wide range of games, including popular titles like The Legend of Zelda: Breath of the Wild and Super Mario Odyssey.</li>
+                    <li>Nintendo also has a unique approach to gaming with innovative peripherals like the Nintendo Labo and Ring Fit Adventure.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

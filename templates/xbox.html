@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='consoleStyles.css') }}" type="text/css">
+    <title>Xbox Information</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image-as-button">
+        </a>
+        <nav class="nav-buttons">
+            <div class="dropdown">
+                <button class="nav-btn dropbtn">Consoles</button>
+                <div class="dropdown-content">
+                    <a href="/pc">PC</a>
+                    <a href="/xbox">Xbox</a>
+                    <a href="/playStation">PlayStation</a>
+                    <a href="/nintendo">Nintendo</a>
+                </div>
+            </div>
+            <a class="nav-btn" href="/newReleases">New Releases</a>
+            <a class="nav-btn">Top 10</a>
+            <a class="nav-btn">Reviews</a>
+        </nav>
+        <div class="auth-buttons">
+            <a class="btn" href="/login">Login</a>
+            <a class="btn" href="/register">Register</a>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <div class="box">
+            <h2>Xbox - Gaming Console</h2>
+            <p>
+                Here are some facts about Xbox:
+                <ul>
+                    <li>Xbox is a line of gaming consoles developed by Microsoft. It includes several generations of consoles, including the original Xbox, Xbox 360, Xbox One, and Xbox Series X/S.</li>
+                    <li>Xbox consoles are known for their gaming performance and extensive game library. They also offer features like online multiplayer gaming through Xbox Live, backward compatibility, and access to popular streaming apps.</li>
+                    <li>The Xbox Series X/S, the latest generation, offers powerful hardware for gaming at high resolutions and frame rates. It supports ray tracing for improved graphics and faster load times due to its SSD storage.</li>
+                    <li>Xbox Game Pass is a subscription service that provides access to a wide range of games for a monthly fee. It includes a library of Xbox Game Studios titles and many third-party games.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

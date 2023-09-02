@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='consoleStyles.css') }}" type="text/css">
+    <title>PC Information</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image-as-button">
+        </a>
+        <nav class="nav-buttons">
+            <div class="dropdown">
+                <button class="nav-btn dropbtn">Consoles</button>
+                <div class="dropdown-content">
+                    <a href="/pc">PC</a>
+                    <a href="/xbox">Xbox</a>
+                    <a href="/playStation">PlayStation</a>
+                    <a href="/nintendo">Nintendo</a>
+                </div>
+            </div>
+            <a class="nav-btn" href="/newReleases">New Releases</a>
+            <a class="nav-btn">Top 10</a>
+            <a class="nav-btn">Reviews</a>
+        </nav>
+        <div class="auth-buttons">
+            <a class="btn" href="/login">Login</a>
+            <a class="btn" href="/register">Register</a>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <div class="box">
+            <h2>PC - personal computer</h2>
+            <p>
+                Here are some facts about PC:
+                <ul>
+                    <li>A gaming computer, also known as a gaming PC, 
+                        is a specialized personal computer designed for playing video games at high standards. 
+                        Gaming PCs typically differ from mainstream personal computers by using high-performance video cards, 
+                        a high core-count central processing units with raw performance and higher-performance RAM. 
+                        Gaming PCs are also used for other demanding tasks such as video editing.
+                        Gamers and computer enthusiasts may choose to overclock their CPUs and GPUs in order to gain extra performance. 
+                        The added power draw needed to overclock either processing units often requires additional cooling, 
+                        usually by air cooling or water cooling.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

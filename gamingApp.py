@@ -59,9 +59,21 @@ def register():
 def login():
     return render_template('login.html')
 
-@app.route('/consoles')
-def consoles():
-    return render_template('consoles.html')
+@app.route('/pc')
+def pc():
+    return render_template('pc.html')
+
+@app.route('/xbox')
+def xbox():
+    return render_template('xbox.html')
+
+@app.route('/playStation')
+def playStation():
+    return render_template('playStation.html')
+
+@app.route('/nintendo')
+def nintendo():
+    return render_template('nintendo.html')
 
 @app.route('/newReleases')
 def newReleases():
