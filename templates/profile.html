@@ -21,12 +21,12 @@
 
     <main class="profile-page">
         <section class="profile-section">
-            <div class="profile-picture">
-            </div>
+            <img src="{{ url_for('static', filename='profile.png') }}" alt="profile" class="profile-picture-btn">
             <div class="profile-info">
                 <h1>Wellcome user: {{ username }}</h1>
                 <p>Console: {{ platform }}</p>
-                <p>Bio: Avid gamer and adventurer.</p>
+                <p>Bio:</p>
+                <input type="text" id = "bio">
             </div>
         </section>
     </main>

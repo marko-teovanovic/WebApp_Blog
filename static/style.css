@@ -35,6 +35,15 @@ header {
     text-decoration: none; /
 }
 
+.profile-picture-btn {
+    display: inline-block;
+    width: 60px; 
+    border-radius: 20px;
+    height: auto; 
+    color: white; 
+    text-decoration: none; /
+}
+
 .content-wrapper {
     display: flex;
     padding-top: 50px;

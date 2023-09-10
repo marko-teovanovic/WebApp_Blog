@@ -1,7 +1,10 @@
-from flask import Flask, redirect, render_template, request, url_for
-import sqlite3
+from flask import Flask, redirect, render_template, request, url_for, flash
+import sqlite3, secrets
+from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
+bcrypt = Bcrypt(app)
+app.secret_key = secrets.token_hex(16)
 
 def get_db_connection():
     conn = sqlite3.connect('users.db')
@@ -25,23 +28,35 @@ def create_table():
 
 create_table()
 
+from flask import flash
+
 @app.route('/register', methods=['POST'])
 def save_profile():
     username = request.form['username']
     email = request.form['email']
     password = request.form['password']
-    platform = request.form.get('platform')  
+    confirm_password = request.form['confirm-password']
+    platform = request.form.get('platform')
+
+    if password != confirm_password:
+        flash('Password and confirm password do not match.', 'error')
+        return redirect(url_for('register'))
+
+    hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
     conn = get_db_connection()
     cursor = conn.cursor()
 
     cursor.execute("INSERT INTO users (username, email, password, platform) VALUES (?, ?, ?, ?)",
-                   (username, email, password, platform))
+                   (username, email, hashed_password, platform))
 
     conn.commit()
     conn.close()
 
-    return redirect(url_for('profile', username=username, platform=platform)) 
+    flash('Your account has been created!', 'success')
+
+    return redirect(url_for('profile', username=username, platform=platform))
+
 
 @app.route('/profile/<username>/<platform>')
 def profile(username, platform):
