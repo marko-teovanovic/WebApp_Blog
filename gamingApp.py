@@ -44,23 +44,21 @@ def save_profile():
 
     hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
-    conn = get_db_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("INSERT INTO users (username, email, password, platform) VALUES (?, ?, ?, ?)",
-                   (username, email, hashed_password, platform))
-
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO users (username, email, password, platform) VALUES (?, ?, ?, ?)",
+                    (username, email, hashed_password, platform))
     conn.commit()
     conn.close()
 
     flash('Your account has been created!', 'success')
 
-    return redirect(url_for('profile', username=username, platform=platform))
+    return redirect(url_for('newProfile', username=username, platform=platform))
 
 
-@app.route('/profile/<username>/<platform>')
-def profile(username, platform):
-    return render_template('profile.html', username=username, platform=platform)
+@app.route('/newProfile/<username>/<platform>')
+def newProfile(username, platform):
+    return render_template('newProfile.html', username=username, platform=platform)
 
 @app.route('/')
 def home():

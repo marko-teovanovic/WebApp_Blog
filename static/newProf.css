@@ -1,21 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body, h2, h3, p, ul, li {
+* {
     margin: 0;
     padding: 0;
-    font-weight: 400;
-}
-
-h1 {
-    margin-left: 10px;
-    padding: 0;
-    color: #1d1d1d;
-}
-
-p {
-    margin-left: 10px;
-    padding: 0;
-    color: #1d1d1d;
+    box-sizing: border-box;
 }
 
 body {
@@ -39,48 +27,31 @@ header {
     width: 100px; 
     height: auto; 
     color: white; 
-    text-decoration: none; /
+    text-decoration: none;
     border-radius: 5px;
 }
 
-.nav-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-btn {
-    color: white;
-    text-decoration: none;
-}
-
 .profile-page {
-    margin: 20px auto;
-    width: 80%;
     max-width: 800px;
-    height: 500px;
+    margin: 20px auto;
+    background-color: #fff;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-section {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.profile-picture {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
+.profile-picture-btn {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    cursor: pointer;
     margin-right: 20px;
-    margin-top: 20px;
-}
-
-.profile-info {
-    flex: 1;
+    border: 2px solid #333;
 }
 
 .profile-info h1 {
@@ -88,37 +59,19 @@ header {
     margin-bottom: 10px;
 }
 
-.profile-info p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 8px;
-}
-
-#bio {
-    width: 50%;
-    height: 300px;
-    padding-left: 15px;
-    padding-top: 0px;
-    border: 2px solid #ff6f00;
-    border-radius: 5px;
-    font-size: 16px;
-    vertical-align: top; 
-    word-wrap: break-word;
-    white-space: pre-wrap; 
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-#bio:focus {
-    border-color: #e65200;
-    box-shadow: 0 0 5px rgba(199, 230, 0, 0.46);
-}
-
-.profile-picture-btn {
+.profile-btn {
     display: inline-block;
-    width: 90px; 
-    border-radius: 20px;
-    height: auto; 
-    color: white; 
-    text-decoration: none; /
+    padding: 10px 20px;
+    background-color: #ff6f00;
+    color: #fff; 
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+}
+
+.profile-btn:hover {
+    background-color: #ff851b; 
 }

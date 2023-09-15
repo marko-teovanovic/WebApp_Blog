@@ -11,12 +11,6 @@
         <a href="/">
             <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image-as-button">
         </a>
-        <nav class="nav-buttons">
-            <a class="nav-btn" href="/consoles">Consoles</a>
-            <a class="nav-btn" href="/newReleases">New Releases</a>
-            <a class="nav-btn">Top 10</a>
-            <a class="nav-btn">Reviews</a>
-        </nav>
     </header>
 
     <main class="profile-page">
@@ -24,9 +18,11 @@
             <img src="{{ url_for('static', filename='profile.png') }}" alt="profile" class="profile-picture-btn">
             <div class="profile-info">
                 <h1>Wellcome user: {{ username }}</h1>
-                <p>Console: {{ platform }}</p>
-                <p>Bio:</p>
-                <input type="text" id = "bio">
+                <a class="profile-btn" href="">Go to profile</a>
+        </form>
+    </div>
+    </div>
+    </div>
             </div>
         </section>
     </main>
