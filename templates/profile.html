@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profileStyle.css') }}" type="text/css">
+    <title>User Profile</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Games World Logo" class="logo-image-as-button">
+        </a>
+        <a href="/logout">Logout</a>
+    </header>
+    <main class="profile">
+        <section class="user-info">
+            <img src="{{ url_for('static', filename='profile.png') }}" alt="User Avatar" class="avatar">
+            <h2>{{ user.username }}</h2>
+            <p>Platform: {{ user.platform }}</p>
+        </section>
+        <section class="user-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>Posted a review on <a href="#">Game Title</a></li>
+                <li>Commented on <a href="#">News Article</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

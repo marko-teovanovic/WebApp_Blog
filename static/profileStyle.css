@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0a0a;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo-image-as-button {
+    display: inline-block;
+    width: 100px; 
+    height: auto; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.profile {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    text-align: center;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.541); 
+}
+
+.user-info h2 {
+    font-size: 24px;
+    padding: 8px;
+}
+
+.user-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.user-activity {
+    margin-top: 20px;
+    padding: 8px;
+}
+
+.user-activity h2 {
+    font-size: 20px;
+}
+
+.user-activity ul {
+    list-style: none;
+}
+
+.user-activity li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.user-activity a {
+    color: #ff6f00;
+    text-decoration: none;
+    font-weight: bold;
+}
